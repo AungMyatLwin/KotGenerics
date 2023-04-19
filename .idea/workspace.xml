@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4931448e-2187-44f8-ab21-2485fb96b142" name="Changes" comment="Generic">
+    <list default="true" id="4931448e-2187-44f8-ab21-2485fb96b142" name="Changes" comment="out keyword">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -66,11 +66,19 @@
       <option name="project" value="LOCAL" />
       <updated>1681945318786</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="out keyword">
+      <created>1681945529790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681945529790</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Generic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generic" />
+    <MESSAGE value="out keyword" />
+    <option name="LAST_COMMIT_MESSAGE" value="out keyword" />
   </component>
 </project>

@@ -1,7 +1,13 @@
 
 
 //class Team<T:Player>(val name: String, val players: MutableList<T>){
-class Team<T:Player>(val name: String, val players: MutableList<out T>){
+
+// convariances
+//class Team<T:Player>(val name: String, val players: MutableList<out T>){
+
+
+// contravariance
+class Team<T:Player>(val name: String, val players: MutableList<in T>){
     fun addPlayer(player: T){
         if(players.contains(player)){
 //            println("Player: ${(player as Player).name} is already in the team ${this.name}")
@@ -16,9 +22,16 @@ class Team<T:Player>(val name: String, val players: MutableList<out T>){
 }
 
 fun main(args: Array<String>) {
+    // convariances
     val footballTeam=Team<Player>(
         name = "Football Team",
-        mutableListOf<FootballPlayer>(FootballPlayer("Player 1"),FootballPlayer("Player 2"))
+        mutableListOf<Player>(FootballPlayer("Player 1"),FootballPlayer("Player 2"))
+    )
+
+    // contravariance
+    val gameTeam= Team<CounterStrikePlayer>(
+        "Game Team",
+        mutableListOf<GamesPlayer>(GamesPlayer("player 1"), GamesPlayer("player 2"))
     )
 }
 
