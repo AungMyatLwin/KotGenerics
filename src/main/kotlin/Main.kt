@@ -7,7 +7,7 @@
 
 
 // contravariance
-class Team<T:Player>(val name: String, val players: MutableList<in T>){
+class Team<T:Player>(val name: String, val players: MutableList<in  T>){
     fun addPlayer(player: T){
         if(players.contains(player)){
 //            println("Player: ${(player as Player).name} is already in the team ${this.name}")
