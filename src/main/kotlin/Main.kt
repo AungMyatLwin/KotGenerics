@@ -22,20 +22,22 @@ class Team<T:Player>(val name: String, val players: MutableList<in  T>){
 }
 
 fun main(args: Array<String>) {
-    // convariances
-    val footballTeam=Team<Player>(
-        name = "Football Team",
-        mutableListOf<Player>(FootballPlayer("Player 1"),FootballPlayer("Player 2"))
-    )
-
-    // contravariance
-    val gameTeam= Team<CounterStrikePlayer>(
-        "Game Team",
-        mutableListOf<GamesPlayer>(GamesPlayer("player 1"), GamesPlayer("player 2"))
-    )
+    val mixedList= mutableListOf(1,2,360,'a','b','c',"Hello","World")
+    val spec=getSpecificTypes<Int>(mixedList)
+    for(element in spec){
+        println(element)
+    }
 }
 
-
+inline fun <reified T> getSpecificTypes(list: List<Any>):List<T>{
+    val specificList= mutableListOf<T>()
+    for(element in list){
+        if(element is T){
+            specificList.add(element)
+        }
+    }
+    return  specificList
+}
 
 
 fun collectionGeneric(){
